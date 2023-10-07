@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Flying arrow</title>
+<script language='JavaScript' type='text/JavaScript'>
+	function move_img(str) {
+	switch(str){
+	case "down":
+		var x=document.getElementById('pic').offsetTop;
+		x= x + 100;
+		document.getElementById('pic').style.top= x + "px";
+	break;
+
+	case "up":
+		var x=document.getElementById('pic').offsetTop;
+		x= x -100;
+		document.getElementById('pic').style.top= x + "px";
+	break;
+
+	case "left":
+		var y=document.getElementById('pic').offsetLeft;
+		y= y - 100;
+		document.getElementById('pic').style.left= y + "px";
+	break;
+
+	case "right":
+		var y=document.getElementById('pic').offsetLeft;
+		y= y + 100;
+		document.getElementById('pic').style.left= y + "px";
+	break;
+}}
+</script>
+</head>
+<body>
+	<img src="arrow.jpeg" id="pic" style="position:absolute; left: 200px; top: 200px; height: 20%">
+	<input type=button onClick=move_img('up') value='Up'>
+	<input type=button onClick=move_img('left') value='Left'>
+	<input type=button onClick=move_img('right') value='Right'>
+	<input type=button onClick=move_img('down') value='Down'>
+</body>
+</html>
